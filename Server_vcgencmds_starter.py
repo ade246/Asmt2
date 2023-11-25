@@ -24,6 +24,11 @@ def get_core_temperature():
     temperature = os.popen('vcgencmd measure_temp').readline()
     return temperature.strip()
 
+# Function to get CPU Clock Frequency from Pi
+def get_cpu_clock_frequency():
+    frequency = os.popen('vcgencmd measure_clock arm').readline()
+    return frequency.strip()
+
 
 
 while True:
