@@ -1,8 +1,13 @@
-# This server runs on Pi, sends Pi's your 4 arguments from the vcgencmds, sent as Json object.
+"""server.py 
+### KHARI WALLACE, 100807131, TPRG 2131 ###
 
-# details of the Pi's vcgencmds - https://www.tomshardware.com/how-to/raspberry-pi-benchmark-vcgencmd
-# more vcgens on Pi 4, https://forums.raspberrypi.com/viewtopic.php?t=245733
-# more of these at https://www.nicm.dev/vcgencmd/
+TPRG 2131 Fall 2023 Assignment 2
+November 28th, 2023
+Khari Wallace <khari.wallace@dcmail.ca>
+
+# This server runs on Pi, sends the Pi's 4 arguments from the vcgencmds,
+sent as Json object.
+"""
 
 import socket
 import os, time
