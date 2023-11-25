@@ -34,6 +34,11 @@ def get_gpu_memory_usage():
     memory_usage = os.popen('vcgencmd get_mem reloc').readline()
     return memory_usage.strip()
 
+# Function to get Voltage Level from Pi
+def get_voltage_level():
+    voltage = os.popen('vcgencmd measure_volts').readline()
+    return voltage.strip()
+
 
 
 while True:
