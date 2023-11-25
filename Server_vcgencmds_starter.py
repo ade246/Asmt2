@@ -44,6 +44,14 @@ def get_voltage_level():
 while True:
   c, addr = s.accept()
   print ('Got connection from',addr)
+
+   # Create a dictionary with the new arguments
+    data = {
+        "Temperature": get_core_temperature(),
+        "CPU Clock Frequency": get_cpu_clock_frequency(),
+        "GPU Memory Usage": get_gpu_memory_usage(),
+        "Voltage Level": get_voltage_level()
+    }   
   res = bytes(str(f_dict), 'utf-8') # needs to be a byte
   c.send(res) # sends data as a byte type
   c.close()
