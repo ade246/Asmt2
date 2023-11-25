@@ -29,6 +29,11 @@ def get_cpu_clock_frequency():
     frequency = os.popen('vcgencmd measure_clock arm').readline()
     return frequency.strip()
 
+# Function to get GPU Memory Usage from Pi
+def get_gpu_memory_usage():
+    memory_usage = os.popen('vcgencmd get_mem reloc').readline()
+    return memory_usage.strip()
+
 
 
 while True:
