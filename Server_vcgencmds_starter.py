@@ -51,7 +51,11 @@ while True:
         "CPU Clock Frequency": get_cpu_clock_frequency(),
         "GPU Memory Usage": get_gpu_memory_usage(),
         "Voltage Level": get_voltage_level()
-    }   
-  res = bytes(str(f_dict), 'utf-8') # needs to be a byte
-  c.send(res) # sends data as a byte type
-  c.close()
+    }  
+
+    # Convert the dictionary to a JSON string
+    json_data = json.dumps(data)
+  
+    res = bytes(str(f_dict), 'utf-8') # needs to be a byte
+    c.send(res) # sends data as a byte type
+    c.close()
